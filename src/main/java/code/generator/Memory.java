@@ -1,4 +1,4 @@
-package codeGenerator;
+package main.java.code.generator;
 
 import java.util.ArrayList;
 

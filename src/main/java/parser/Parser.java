@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 import Log.Log;
-import codeGenerator.CodeGenerator;
+import main.java.code.generator.CodeGenerator;
 import errorHandler.ErrorHandler;
 import scanner.lexicalAnalyzer;
 import scanner.token.Token;
