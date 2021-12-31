@@ -1,5 +1,5 @@
 package parser;
-
+import java.util.List;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,7 +14,7 @@ import scanner.token.Token;
 
 
 public class Parser {
-  private ArrayList<Rule> rules;
+  private List<Rule> rules;
   private Stack<Integer> parsStack;
   private ParseTable parseTable;
   private scanner.LexicalAnalyzer lexicalAnalyzer;

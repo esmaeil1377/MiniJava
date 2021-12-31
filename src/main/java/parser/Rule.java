@@ -6,7 +6,7 @@ import scanner.type.Type;
 
 import java.lang.management.GarbageCollectorMXBean;
 import java.util.ArrayList;
-
+import java.util.List;
 /**
  * Created by mohammad hosein on 6/25/2015.
  */
@@ -47,7 +47,7 @@ public class Rule {
         }
     }
     public NonTerminal LHS;
-    public ArrayList<GrammarSymbol> RHS;
+    public List<GrammarSymbol> RHS;
     public int semanticAction;
 }
 
