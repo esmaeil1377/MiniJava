@@ -5,7 +5,7 @@ import main.java.code.generator.Address;
 import main.java.code.generator.Memory;
 import main.java.code.generator.TypeAddress;
 import main.java.code.generator.varType;
-import errorHandler.ErrorHandler;
+import main.java.error.handler.ErrorHandler;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -82,8 +82,9 @@ public class SymbolTable {
 
     public Symbol get(String className, String methodName, String variable) {
         Symbol res = klasses.get(className).Methodes.get(methodName).getVariable(variable);
-        if (res == null)
+        if (res == null) {
             res = get(variable, className);
+        }
         return res;
     }
 
@@ -164,10 +165,12 @@ public class SymbolTable {
         }
 
         public Symbol getVariable(String variableName) {
-            if (parameters.containsKey(variableName))
+            if (parameters.containsKey(variableName)) {
                 return parameters.get(variableName);
-            if (localVariable.containsKey(variableName))
+            }
+            if (localVariable.containsKey(variableName)) {
                 return localVariable.get(variableName);
+            }
             return null;
         }
 

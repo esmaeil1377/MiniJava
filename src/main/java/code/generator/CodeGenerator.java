@@ -1,7 +1,7 @@
 package main.java.code.generator;
 
 import Log.Log;
-import errorHandler.ErrorHandler;
+import main.java.error.handler.ErrorHandler;
 import scanner.token.Token;
 import semantic.symbol.Symbol;
 import semantic.symbol.SymbolTable;

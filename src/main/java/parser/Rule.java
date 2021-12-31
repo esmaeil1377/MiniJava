@@ -40,7 +40,7 @@ public class Rule {
                         RHS.add(new GrammarSymbol(new Token(Token.getTyepFormString(s), s)));
 //                    }catch (IllegalArgumentException d){
 //                        d.printStackTrace();
-//                        Log.print(s);
+//                        log.print(s);
 //                    }
                 }
             }

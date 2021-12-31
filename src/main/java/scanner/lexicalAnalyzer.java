@@ -1,6 +1,6 @@
 package scanner;
 
-import errorHandler.ErrorHandler;
+import main.java.error.handler.ErrorHandler;
 import scanner.token.Token;
 import scanner.type.Type;
 
@@ -18,8 +18,9 @@ public class lexicalAnalyzer {
             input.append(sc.nextLine());
         }
         StringBuilder tokenPattern = new StringBuilder();
-        for (Type tokenType : Type.values())
+        for (Type tokenType : Type.values()) {
             tokenPattern.append(String.format("|(?<%s>%s)", tokenType.name(), tokenType.pattern));
+        }
         Pattern expression = Pattern.compile(tokenPattern.substring(1));
         matcher = expression.matcher(input.toString());
     }
