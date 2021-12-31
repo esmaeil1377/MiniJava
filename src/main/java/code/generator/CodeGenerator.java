@@ -66,7 +66,7 @@ public class CodeGenerator {
                 add();
                 break;
             case 12:
-                mult();
+                add();
                 break;
             case 13:
                 label();
@@ -315,21 +315,9 @@ public class CodeGenerator {
         Address s1 = ss.pop();
 
         if (s1.varType != VarType.Int || s2.varType != VarType.Int) {
-            ErrorHandler.printError("In add or sub two operands must be integer");
+            ErrorHandler.printError("In add or sub or mult two operands must be integer");
         }
         memory.add3AddressCode(Operation.ADD, s1, s2, temp);
-        ss.push(temp);
-    }
-
-    public void mult() {
-        Address temp = new Address(memory.getTemp(), VarType.Int);
-        Address s2 = ss.pop();
-        Address s1 = ss.pop();
-        if (s1.varType != VarType.Int || s2.varType != VarType.Int) {
-            ErrorHandler.printError("In mult two operands must be integer");
-        }
-        memory.add3AddressCode(Operation.MULT, s1, s2, temp);
-//        memory.saveMemory();
         ss.push(temp);
     }
 
